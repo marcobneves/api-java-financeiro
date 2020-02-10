@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 import com.google.gson.Gson;
 import br.com.cielo.api.entity.MovimentacaoEntity;
-import br.com.cielo.api.exception.ArquivoException;
 
 public class MovimentacaoModel {
 
@@ -25,8 +24,6 @@ public class MovimentacaoModel {
 			result = IOUtils.toString(classLoader.getResourceAsStream(arquivo));
 		} catch (IOException e) {
 			e.printStackTrace();
-//			System.out.println("Não foi possível acessar o arquivo.");
-//			e.printStackTrace();
 		}
 		return result;
 	}
